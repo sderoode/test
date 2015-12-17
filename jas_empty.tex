@@ -1,0 +1,135 @@
+
+
+% DOUBLE SPACE VERSION FOR SUBMISSION TO THE AMS
+\documentclass[12pt]{article}
+\usepackage{ametsoc,epsfig,rotating,color,amsmath,graphicx,pdflscape}
+\usepackage{lineno,color}\linenumbers
+\usepackage[titletoc,title]{appendix}
+\usepackage{titlesec}
+%
+\begin{document}
+%
+%\linenumbers
+%\documentclass[10pt]{article}
+%\usepackage{ametsoc2col}
+\newcommand{\cred}[1]{{\color{red}{ #1}}}
+\newcommand{\cgrey}[1]{{\color{lightgray} #1}}
+\newcommand{\cblue}[1]{{\color{blue} #1}}
+
+\newcommand{\myabstract}{
+Text abstract  }
+%
+
+ 
+
+
+%\begin{document}
+\title{\textbf{\large{Title}}}
+%
+% Author names, with corresponding author information. 
+% [Update and move the \thanks{...} block as appropriate.]
+%
+
+\author
+{Stephan R. de Roode\thanks{Corresponding author address:  Stephan R. de Roode, s.r.deroode@tudelft.nl, Department of Geoscience and Remote Sensing, Delft University of Technology, Delft, The Netherlands.} ,
+ Author 2\thanks{\textit{The Beach}}
+\\
+\\ 
+\\ 
+\\
+\date{Version of \today}
+     } 
+% The following block of code will handle the formatting of the title page depnding on whether
+% we are formatting a double column (dc) author draft or a single column paper for submission.
+% AUTHORS SHOULD SKIP OVER THIS... There is nothing to do in this section of code.
+\ifthenelse{\boolean{dc}}
+{
+\twocolumn[
+\begin{@twocolumnfalse}
+\amstitle
+
+% Start Abstract (Enter your Abstract above.  Do not enter any text here)
+\begin{center}
+\begin{minipage}{13.0cm}
+\begin{abstract}
+	\myabstract
+	\newline
+	\begin{center}
+		\rule{38mm}{0.2mm}
+	\end{center}
+\end{abstract}
+\end{minipage}
+\end{center}
+\end{@twocolumnfalse}
+]
+}
+{
+\amstitle
+\begin{abstract}
+\myabstract
+\end{abstract}
+\newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN BODY OF PAPER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Introduction}
+Stratocumulus 
+   
+
+\subsection{Summary }
+
+%
+ %
+ %
+\begin{figure*}[ht]
+\includegraphics[width=40pc]{Plots/wolk.png}
+\caption{Text.}
+\label{fig:test}
+\end{figure*}
+%
+%
+ 
+
+\begin{table*}
+\begin{tabular}{ l l l l l l}
+\hline
+     &          & ASTEX & Fast & Reference & Slow \\           
+\hline 
+latitude  & $^0$N  &     34 &   25  &   25 & 25  \\
+longitude & $^0$W  &     25 &   125  &   125 & 125  \\
+date      &        & 13 June  & 15 July & 15 July & 15 July \\ 
+Div       & 10$^{-6}$ s$^{-1}$   &  - & 1.9 & 1.86 & 1.84 \\  
+z$_{\mathrm{Div}}$ & km & 1.6 & 2  & 2 & 2 \\
+\hline       
+\end{tabular}   
+\caption{Details of the simulations. Div represents the large-scale divergence of the horizontal mean wind velocities, which is constant in time and constant up to a height of z$_{\mathrm{Div}}$, except for the ASTEX case in which the divergence varies with time.}
+\label{tab:set_up}
+\end{table*}
+ 
+\begin{acknowledgment}
+The investigations were done  
+\end{acknowledgment}
+
+
+\titleformat{\section}{\large\bfseries}{\appendixname~\thesection .}{0.5em}{}
+ \renewcommand{\theequation}{A-\arabic{equation}}
+  % redefine the command that creates the equation no.
+  \setcounter{equation}{0}  % reset counter 
+\begin{appendices}
+
+\section{A mixed-layer model for the subcloud layer}
+
+The budget equation for 
+\end{appendices}
+
+\ifthenelse{\boolean{dc}}
+{}
+{\clearpage}
+\bibliographystyle{ametsoc}
+\bibliography{cumulus}
+
+\end{document}
