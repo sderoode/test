@@ -1,6 +1,1 @@
-# test
-testing github
-make a first modification to the readme file
-
-
-this is the second addition
+I am going to put a latex template for a JAS paper
